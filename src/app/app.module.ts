@@ -10,6 +10,9 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ChatPage } from '../pages/chat/chat';
 
+//service
+import {chatService } from './chat.service';
+
 const config = {
     apiKey: "AIzaSyBFK2PLUEKlfqbv8RAuSRu-hoZKthCnvyU",
     authDomain: "ionic-chat-b339d.firebaseapp.com",
@@ -39,6 +42,7 @@ const config = {
     ChatPage
   ],
   providers: [
+   chatService,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
